@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{
+            background-color: black;
+        }
+
+        p{
+            color: white;
+            text-align: center;
+        }
+
+        a{
+            text-align: center;
+        }
+
+        .centre{
+            text-align: center;
+        }
+
+        .centreimg{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .Game{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color: aqua;
+        }
+        .School{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            color:greenyellow;
+        }
+        .Bordered{
+            border: 1px;
+            border-color: white;
+        }
+    </style>
+    <script>
+        function sort(){
+            const projects = document.getElementById('Projects')
+            if(document.getElementById('select').value == 'All'){
+                    for(let i = 0; i < projects.children.length; i++){
+                        projects.children[i].style.display = 'block';
+                    }
+                }
+                if(document.getElementById('select').value == 'Games'){
+                    console.log('games')
+                    for(let i = 0; i < projects.children.length; i++){
+                        //console.log(projects.children[i].className)
+                        if(projects.children[i].className != 'Game'){
+                            console.log('Found')
+                            projects.children[i].style.display = 'none'
+                        }
+                        else if(projects.children[i].className == 'Game'){
+                            projects.children[i].style.display = 'block'
+                        }
+                    }
+                }
+                if(document.getElementById('select').value == 'School / college work'){
+                    console.log('school')
+                    for(let i = 0; i < projects.children.length; i++){
+                        if(projects.children[i].className == 'School'){
+                            console.log('Found')
+                            projects.children[i].style.display = 'block'
+                        }
+                        if(projects.children[i].className != 'School'){
+                            projects.children[i].style.display = 'none'
+                        }
+
+                    }
+                }
+            }
+    </script>
+    <br>
+    <img src="meirl.gif" class="centreimg">
+    <p style="color: white;" class="centre">Odeebee : W.B : Bill Barg.</p>
+    <p style="color: chartreuse;">Currently working on: Cubus</p>
+    <p>↓ Links to my stuff ive made ↓</p>
+    <select name="Sort" id="select" class="centreimg" style="color: black; border: 5px; border-color: white;" onchange="sort()">
+        <option value="All">All</option>
+        <option value="Games">Games</option>
+        <option value="School / college work">School / college work</option>
+    </select>
+    <br>
+    <div id="Projects" class="Bordered">
+        <a href="https://billboblap.itch.io/rob0tcl1ck3r" class="Game">2020 - Robot clicker game</a>
+        <a href="https://billboblap.itch.io/go-duel" class="Game">2020 - 2 Player VS game</a>
+        <a href="https://billboblap.itch.io/spaceinvadersin2hours" class="Game">2020 - Space invaders</a>
+        <a href="https://billboblap.itch.io/growingmould" class="Game">2020 - Mould platformer</a>
+        <a href="https://billboblap.itch.io/monkey-runners-from-hell" class="Game">2020 - MRFH!</a>
+        <a href="https://billboblap.itch.io/samurairedo" class="Game">2020 - Samurai redo</a>
+        <a href="https://github.com/odeebee/2020-Binary-converter" class="School">2020 - Binary-converter</a>
+        <a href="https://github.com/odeebee/Calculator/tree/main/Calculator/WindowsFormsApp1/WindowsFormsApp1/bin/Debug" class="School">2020 - Calculator</a>
+        <a href="https://github.com/odeebee/Noughts-and-crosses/tree/main/NoughtsAndCrosses" class="Game">2020 - Noughts and crosses</a>
+        <a href="https://github.com/odeebee/Noughts-and-crosses/tree/main/NoughtsAndCrosses/MineSweeper/MineSweeper/MineSweeper/bin/Debug" class="School">2020 - School minesweeper project</a>
+        <a href="https://github.com/odeebee/Circle-calculator/tree/main" class="School">2020 - Circle calculator</a>
+        <a href="https://github.com/odeebee/Pong/tree/main/Pong/Pong/bin/Debug" class="Game">2020 - Pong</a>
+        <a href="https://github.com/odeebee/Space-invaders" class="Game">2021 - Space invaders</a>
+        <a href="https://github.com/odeebee/Infinite-runner" class="Game">2021 - Infinite runner</a>
+    </div>
+    <br>
+</html>
